@@ -2,7 +2,7 @@ default: install-vim install-zsh set-zsh
 debian: debian-vim debian-zsh set-zsh
 
 install-vim:
-	sudo pacman -S vim
+	sudo pacman -S vim cmake
 	cp vimrc ~/.vimrc
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	mkdir ~/.vim/plugged
@@ -10,10 +10,15 @@ install-vim:
 	python ~/.vim/plugged/YouCompleteMe/install.py
 
 install-zsh:
-	sudo pacman -S zsh zsh-autosuggestions autojump thefuck virtualenvwrapper
+	sudo pacman -S zsh zsh-autosuggestions autojump thefuck python-virtualenvwrapper
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	cp zshrc ~/.zshrc
+	cp -r /usr/share/zsh/plugins/zsh-autosuggestions ~/.oh-my-zsh/plugins/
+	cp -r /usr/share/zsh/plugins/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/
+	cp -r /usr/share/zsh-theme-powerlevel9k/ ~/.oh-my-zsh/themes/powerlevel9k
 	
+install-rofi:
+	cp -r rofi ~/.config/
 
 install-packages:
 	yaourt -S --needed -noconfirm `cat packages.txt`

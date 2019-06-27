@@ -4,9 +4,25 @@ Install useful tools and configure your linux desktop by just run one command.
 - Coding:
     - vim: The world's best editor
 
+- Command Line Tools:
+    - ranger: A terminal file manager
+    - fzf: a powerful fuzzy find tools
+    - cmus: A command line music player
+
+- Desktop Environment:
+    - i3-gaps: a flatten window manager
+    - rofi: a powerful spotlight
+    - typora: a beautiful markdown editor
+
+
 - System Tools:
     - zsh: A much more powerful shell
     - oh-my-zsh 
+    - alacritty: a GPU-accelarated Terminal
+    - compton: 
+    - curl
+    - wget
+
 
 ## Vim
 一些基本设置：
