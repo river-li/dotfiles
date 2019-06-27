@@ -1,4 +1,5 @@
 vim
+cmake
 ranger
 pulseaudio
 tlp
