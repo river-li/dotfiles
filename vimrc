@@ -63,6 +63,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'garbas/vim-snipmate'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdcommenter'
 	Plug 'tomtom/tlib_vim'
 	Plug 'MarcWeber/vim-addon-mw-utils'
 	Plug 'honza/vim-snippets'
@@ -71,7 +72,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'mhinz/vim-startify'
     Plug 'sheerun/vim-polyglot'
-    Plug 'yanoasis/vim-devicons'
+    Plug 'ryanoasis/vim-devicons'
     Plug 'mbbill/undotree'
     Plug '/usr/share/fzf'
 call plug#end()
