@@ -64,6 +64,7 @@ Install useful tools and configure your linux desktop by just run one command.
 - vim-devicons
 - vim-signify
 - vim-nerdcommenter
+- undotree
 
 
 ## zsh

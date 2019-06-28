@@ -44,9 +44,6 @@ map <LEADER>k <C-w>k
 map <LEADER>l <C-w>l
 "设置快速切换分屏光标快捷键
 
-map <LEADER>j 5j
-map <LEADER>k 5k
-
 map <LEADER>z zf%
 map <LEADER>d zd
 
@@ -75,6 +72,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-startify'
     Plug 'sheerun/vim-polyglot'
     Plug 'yanoasis/vim-devicons'
+    Plug 'mbbill/undotree'
     Plug '/usr/share/fzf'
 call plug#end()
 
@@ -87,6 +85,7 @@ noremap gr :SignifyRefresh<CR>
 
 map <LEADER>f :NERDTreeToggle <CR>
 map <LEADER>b :TagbarToggle<CR>
+noremap <F5> :UndotreeToggle<CR>
 
 "let g:SnazzyTransparent=1
 colorscheme snazzy
