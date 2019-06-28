@@ -2,7 +2,7 @@ default: install-vim install-zsh set-zsh
 debian: debian-vim debian-zsh set-zsh
 
 install-vim:
-	sudo pacman -S vim cmake fzf ctags
+	sudo pacman -S vim cmake fzf ctags nerd-fonts-complete
 	cp vimrc ~/.vimrc
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	mkdir ~/.vim/plugged
@@ -33,7 +33,7 @@ enable-service:
 	sudo tlp start
 
 debian-vim:
-	sudo apt-get install ctags
+	sudo apt-get install ctags nerd-fonts-complete
 	git clone https://github.com/vim/vim.git ./tmp
 	cd tmp/src
 	make

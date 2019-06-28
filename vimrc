@@ -19,6 +19,7 @@ set incsearch
 exec "nohlsearch"
 set ignorecase
 set smartcase
+set encoding=UTF-8
 
 set tags=tags
 set wrap
@@ -72,6 +73,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'
     Plug 'Valloric/YouCompleteMe'
     Plug 'majutsushi/tagbar'
+    Plug 'mhinz/vim-startify'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'yanoasis/vim-devicons'
     Plug '/usr/share/fzf'
 call plug#end()
 

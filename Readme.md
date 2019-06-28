@@ -57,6 +57,11 @@ Install useful tools and configure your linux desktop by just run one command.
 - vim-snippets 自定义代码块补全插件
 - supertab 设置tab为自动补全
 - fzf command line search tool
+- vim-startify
+- vim-tagbar
+- vim-polyglot 
+- vim-devicons
+
 
 ## zsh
 zsh配置的插件:
