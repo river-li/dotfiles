@@ -45,7 +45,8 @@ Install useful tools and configure your linux desktop by just run one command.
 - LEADER键+t开启新标签
 - 绑定LEADER+j/k 一次移动多行
 - LEADER+f开启NerdTree
-- LEADER+c开启TagBar
+- LEADER+b开启TagBar
+- LEADER+c[] Comment
 
 安装了的插件：
 - NerdTree 侧边栏文件树
@@ -61,6 +62,8 @@ Install useful tools and configure your linux desktop by just run one command.
 - vim-tagbar
 - vim-polyglot 
 - vim-devicons
+- vim-signify
+- vim-nerdcommenter
 
 
 ## zsh

@@ -59,7 +59,6 @@ map <right> :vertical resize+5<CR>
 map <LEADER>t :tabe<CR>
 
 
-
 call plug#begin('~/.vim/plugged') 
     Plug 'connorholyday/vim-snazzy'
 	Plug 'itchyny/lightline.vim' 
@@ -79,8 +78,34 @@ call plug#begin('~/.vim/plugged')
     Plug '/usr/share/fzf'
 call plug#end()
 
+let g:signify_vcs_list =['git']
+let g:signify_cursorhold_insert = 1
+let g:signify_cursorhold_normal = 1
+let g:signify_updated_on_bufenter = 0
+
+noremap gr :SignifyRefresh<CR>
+
 map <LEADER>f :NERDTreeToggle <CR>
-map <LEADER>c :TagbarToggle<CR>
+map <LEADER>b :TagbarToggle<CR>
 
 "let g:SnazzyTransparent=1
 colorscheme snazzy
+"
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+

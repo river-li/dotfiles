@@ -17,12 +17,14 @@ install-zsh:
 	cp -r /usr/share/zsh/plugins/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/
 	cp -r /usr/share/zsh-theme-powerlevel9k/ ~/.oh-my-zsh/themes/powerlevel9k
 	
-install-rofi:
+config-rofi:
 	cp -r rofi ~/.config/
 
-install-3:
+config-i3:
 	cp -r i3 ~/.config/
 
+config-alacritty:
+	cp -r alacritty ~/.config/
 
 install-packages:
 	yaourt -S --needed -noconfirm `cat packages.txt`
