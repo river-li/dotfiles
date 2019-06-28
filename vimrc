@@ -20,6 +20,7 @@ exec "nohlsearch"
 set ignorecase
 set smartcase
 
+set tags=tags
 set wrap
 set showcmd
 
@@ -70,10 +71,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'honza/vim-snippets'
 	Plug 'vim-airline/vim-airline'
     Plug 'Valloric/YouCompleteMe'
+    Plug 'majutsushi/tagbar'
     Plug '/usr/share/fzf'
 call plug#end()
 
 map <LEADER>f :NERDTreeToggle <CR>
+map <LEADER>c :TagbarToggle<CR>
 
 "let g:SnazzyTransparent=1
 colorscheme snazzy

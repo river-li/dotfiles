@@ -5,7 +5,6 @@ Install useful tools and configure your linux desktop by just run one command.
     - vim: The world's best editor
 
 - Command Line Tools:
-    - ranger: A terminal file manager
     - fzf: a powerful fuzzy find tools
     - cmus: A command line music player
 
@@ -13,6 +12,8 @@ Install useful tools and configure your linux desktop by just run one command.
     - i3-gaps: a flatten window manager
     - rofi: a powerful spotlight
     - typora: a beautiful markdown editor
+    - qutebrowser: A keyboard-focused browser
+    - ranger: A vim key-mapped terminal file manager
 
 
 - System Tools:
@@ -44,6 +45,7 @@ Install useful tools and configure your linux desktop by just run one command.
 - LEADER键+t开启新标签
 - 绑定LEADER+j/k 一次移动多行
 - LEADER+f开启NerdTree
+- LEADER+c开启TagBar
 
 安装了的插件：
 - NerdTree 侧边栏文件树

@@ -1,3 +1,4 @@
+fzf
 vim
 cmake
 ranger
@@ -17,6 +18,8 @@ deepin-icon-theme
 virtualbox
 miniconda3
 mailspring
+qutebrowser
+ranger
 pulseaudio
 tlp
 evince
