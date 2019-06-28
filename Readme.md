@@ -54,6 +54,7 @@ Install useful tools and configure your linux desktop by just run one command.
 - lightline 底部的指示栏
 - vim-snippets 自定义代码块补全插件
 - supertab 设置tab为自动补全
+- fzf command line search tool
 
 ## zsh
 zsh配置的插件:

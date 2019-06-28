@@ -2,7 +2,7 @@ default: install-vim install-zsh set-zsh
 debian: debian-vim debian-zsh set-zsh
 
 install-vim:
-	sudo pacman -S vim cmake
+	sudo pacman -S vim cmake fzf
 	cp vimrc ~/.vimrc
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	mkdir ~/.vim/plugged
@@ -19,6 +19,10 @@ install-zsh:
 	
 install-rofi:
 	cp -r rofi ~/.config/
+
+install-3:
+	cp -r i3 ~/.config/
+
 
 install-packages:
 	yaourt -S --needed -noconfirm `cat packages.txt`
@@ -39,6 +43,8 @@ debian-vim:
 	mkdir ~/.vim/plugged
 	vim -c \:PlugInstall
 	python ~/.vim/plugged/YouCompleteMe/install.py
+	git clone --depth 1 https://github.com/junegunn/fzf.git /usr/share/fzf
+	/usr/share/fzf/install
 
 debian-zsh:
 	sudo apt-get install zsh curl python-thefuck python-virtualenv python3-virtualenv virtualenvwrapper

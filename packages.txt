@@ -9,6 +9,14 @@ powerline-fonts
 ttf-font-awesome
 ttf-font-icons
 cmus
+deepin-wine-qq
+deepin-wine-wechat
+telegram-desktop
+v2ray
+deepin-icon-theme
+virtualbox
+miniconda3
+mailspring
 pulseaudio
 tlp
 evince

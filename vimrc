@@ -70,6 +70,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'honza/vim-snippets'
 	Plug 'vim-airline/vim-airline'
     Plug 'Valloric/YouCompleteMe'
+    Plug '/usr/share/fzf'
 call plug#end()
 
 map <LEADER>f :NERDTreeToggle <CR>
