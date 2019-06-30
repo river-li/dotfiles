@@ -43,6 +43,7 @@ debian-vim:
 	git clone https://github.com/vim/vim.git ./tmp
 	cd tmp/src
 	make
+	make install
 	cd ../..
 	rm -rf tmp
 	cp vimrc ~/.vimrc
