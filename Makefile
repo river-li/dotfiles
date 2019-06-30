@@ -22,6 +22,10 @@ config-rofi:
 
 config-i3:
 	cp -r i3 ~/.config/
+	sudo cp i3/i3exit /usr/bin/i3exit
+	sudo mkdir -p /etc/X11/xorg.conf.d 
+	sudo cp i3/90-touchpad.conf /etc/X11/xorg.conf.d/
+	cp -r polybar ~/.config/
 
 config-alacritty:
 	cp -r alacritty ~/.config/
