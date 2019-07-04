@@ -6,6 +6,8 @@ filetype plugin indent on
 
 set foldmethod=manual
 set autochdir
+set autochdir
+set encoding=UTF-8
 
 set number
 set relativenumber
@@ -19,12 +21,12 @@ set incsearch
 exec "nohlsearch"
 set ignorecase
 set smartcase
-set encoding=UTF-8
 
-set tags=tags
+
 set wrap
 set showcmd
 
+" set tags=tags
 syntax on
 """
 
@@ -54,43 +56,55 @@ map <right> :vertical resize+5<CR>
 "设置调整分屏窗口大小
 
 map <LEADER>t :tabe<CR>
-
+map <LEADER>b :TagbarToggle<CR>
+noremap <F5> :UndotreeToggle<CR>
 
 call plug#begin('~/.vim/plugged') 
     Plug 'connorholyday/vim-snazzy'
-	Plug 'itchyny/lightline.vim' 
+	Plug 'itchyny/lightline.vim'
 	Plug 'ervandew/supertab'
 	Plug 'garbas/vim-snipmate'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'scrooloose/nerdtree'
 	Plug 'scrooloose/nerdcommenter'
-	Plug 'tomtom/tlib_vim'
+    Plug 'tomtom/tlib_vim'
 	Plug 'MarcWeber/vim-addon-mw-utils'
 	Plug 'honza/vim-snippets'
 	Plug 'vim-airline/vim-airline'
     Plug 'Valloric/YouCompleteMe'
     Plug 'majutsushi/tagbar'
-    Plug 'mhinz/vim-startify'
     Plug 'sheerun/vim-polyglot'
+    Plug 'mhinz/vim-startify'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'mhinz/vim-signify'
     Plug 'mbbill/undotree'
+    Plug 'joker1007/vim-markdown-quote-syntax'
+    Plug 'iamcco/mathjax-support-for-mkdp'
+    Plug 'iamcco/markdown-preview.vim'
+    Plug 'SirVer/ultisnips'
     Plug '/usr/share/fzf'
 call plug#end()
 
+map <LEADER>f :NERDTreeToggle <CR>
+
+map <LEADER>p :MarkdownPreview<CR>
+
+
+"""""" SIGNIFY
 let g:signify_vcs_list =['git']
 let g:signify_cursorhold_insert = 1
 let g:signify_cursorhold_normal = 1
 let g:signify_updated_on_bufenter = 0
 
 noremap gr :SignifyRefresh<CR>
+""""""
 
-map <LEADER>f :NERDTreeToggle <CR>
-map <LEADER>b :TagbarToggle<CR>
-noremap <F5> :UndotreeToggle<CR>
-
-"let g:SnazzyTransparent=1
+""""""ColorScheme
+let g:SnazzyTransparent=1
 colorscheme snazzy
-"
+""""""
+
+"""""" NERDCOMMENTER
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
@@ -107,5 +121,15 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+""""""
 
 
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
