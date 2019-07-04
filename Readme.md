@@ -3,26 +3,32 @@ Install useful tools and configure your linux desktop by just run one command.
 ## Packages
 - Coding:
     - vim: The world's best editor
+    - miniconda3: python发行版
 
+            
 - Command Line Tools:
-    - fzf: a powerful fuzzy find tools
-    - cmus: A command line music player
+    - fzf   : 命令行的模糊搜索工具，十分强大
+    - cmus  : 命令行的音乐播放器
 
+            
 - Desktop Environment:
-    - i3-gaps: a flatten window manager
-    - rofi: a powerful spotlight
-    - typora: a beautiful markdown editor
-    - qutebrowser: A keyboard-focused browser
-    - ranger: A vim key-mapped terminal file manager
+    - i3-gaps: 相比i3可以设置窗口间距
+    - rofi: 有点像Spotlight的应用启动器
+    - Typora: a beautiful markdown editor
+    - qutebrowser: 一个可以纯键盘操作的浏览器
+    - ranger: 终端里的文件管理器，Vim类似的键位
+    - polybar : 用于替代i3bar的更好看的bar
+
 
 
 - System Tools:
     - zsh: A much more powerful shell
     - oh-my-zsh 
-    - alacritty: a GPU-accelarated Terminal
-    - compton: 
+    - alacritty: 一款GPU加速的终端
+    - compton: 终端透明工具
     - curl
     - wget
+    - axel 一个多线程断点续传的下载工具，速度飞起
 
 
 ## Vim
@@ -55,8 +61,8 @@ Install useful tools and configure your linux desktop by just run one command.
 - vim-snazzy 设置的主题
 - vim-airline
 - lightline 底部的指示栏
-- vim-snippets 自定义代码块补全插件
-- supertab 设置tab为自动补全
+- vim-snippets      自定义代码块补全插件
+- supertab    设置tab为自动补全
 - fzf command line search tool
 - vim-startify
 - vim-tagbar

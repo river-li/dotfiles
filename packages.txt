@@ -22,7 +22,6 @@ qutebrowser
 ranger
 pulseaudio
 tlp
-evince
 adobe-source-code-pro-fonts
 alacritty
 alacritty-terminfo
@@ -30,6 +29,7 @@ compton
 oh-my-zsh
 i3-gaps
 i3lock-fancy
+youtube-dl
 i3status
 networkmanager
 tmux
@@ -37,3 +37,14 @@ wget
 curl
 axel
 typora
+lutris
+mailspring
+proxychains
+wps-office
+ttf-wps-fonts
+fcitx
+fcitx-googlepinyin
+qutebrowser
+rofi
+anki
+deepin-screenshot
