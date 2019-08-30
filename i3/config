@@ -88,7 +88,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-set $ws1 "Ⅰ :  "
+set $ws1 "Ⅰ :  "
 set $ws2 "Ⅱ :  "
 set $ws3 "Ⅲ :  "
 set $ws4 "Ⅳ :  "
@@ -97,7 +97,7 @@ set $ws6 "Ⅵ :  "
 set $ws7 "Ⅶ :  "
 set $ws8 "Ⅷ :  "
 set $ws9 "Ⅸ :  "
-set $ws10 "Ⅹ :  "
+set $ws10 "Ⅹ :  "
 #set $ws10 "Ⅺ :  "
 #set $ws10 "Ⅻ :  "
 
@@ -147,6 +147,8 @@ for_window[class="vokoscreen"] floating enable
 for_window[class="vlc"] floating enable
 for_window[class="steam"] floating enable
 for_window[class="qq"] floating enabel
+for_window[class="anki"] floating enabel
+for_window[class="origin"] floating enabel
 
 # disable follows_mouse
 focus_follows_mouse no
@@ -181,15 +183,18 @@ gaps outer 5
 
 # run polybar 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
-# exec_always xautolock -time 10 -locker "i3lock-fancy"
+exec_always feh --bg-scale ~/图片/FGO/d75957dfde3d815beb35cc444524603a.jpg
 exec_always mpd ~/.config/mpd/mpd.conf
+exec_always compton
+exec_always fcitx &
 bindsym $mod+Ctrl+a exec --no-startup-id deepin-screenshot
+exec --no-startup-id xset -dpms
+exec_always xautolock -time 10 -locker "i3lock-fancy"
+exec_always mailspring -b
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    # bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym l exec i3lock-fancy
+    bindsym l exec i3lock-fancy -f Hack
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
