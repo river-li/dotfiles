@@ -13,3 +13,4 @@ git clone https://github.com/lieanu/LibcSearcher ~/Documents/LibcSearcher
 python ~/Documents/LibcSearcher/setup.py develop
 
 gem install one_gadget
+gem install seccomp-tools
