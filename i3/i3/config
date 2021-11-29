@@ -1,0 +1,136 @@
+set $mod Mod4
+
+# set Terminal
+bindsym $mod+Return exec --no-startup-id alacritty
+
+# set rofi
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+q exec --no-startup-id rofi -show window
+bindsym $mod+a exec --no-startup-id deepin-screenshot
+
+# use mouse to move floating windows
+floating_modifier $mod
+
+# set gaps between windows
+gaps inner 10
+gaps outer 5
+
+# set title font
+font pango:Hack 14
+
+
+# Window Control
+bindsym $mod+Shift+q kill
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym Mod1+Shift+j move down
+bindsym Mod1+Shift+k move up
+bindsym Mod1+Shift+h move left
+bindsym Mod1+Shift+l move right
+
+bindsym $mod+v split v
+bindsym $mod+C split h
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # same bindings, but for the arrow keys
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+focus_follows_mouse no
+bindsym $mod+Shift+space floating toggle
+
+# restart i3
+bindsym $mod+Shift+r restart
+
+
+# workspace
+set $ws1 "Ⅰ :  "
+set $ws2 "Ⅱ :  "
+set $ws3 "Ⅲ :  "
+set $ws4 "Ⅳ :  "
+set $ws5 "Ⅴ :  "
+set $ws6 "Ⅵ :  "
+set $ws7 "Ⅶ :  "
+set $ws8 "Ⅷ :  "
+set $ws9 "Ⅸ :  "
+set $ws10 "Ⅹ :  "
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# system event
+#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+#mode "$mode_system" {
+#    bindsym l exec i3lock-fancy -f Hack
+#    bindsym e exec --no-startup-id i3exit logout, mode "default"
+#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
+#
+#    # back to normal: Enter or Escape
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+
+bindsym $mod+Shift+l exec --no-startup-id i3lock-fancy 
+
+#bindsym $mod+Home mode "$mode_system"
+#
+
+# run polybar
+exec_always --no-startup-id $HOME/.config/polybar/blocks/launch.sh
+exec_always --no-startup-id fcitx&
+exec_always --no-startup-id compton &
+
+# Window set
+for_window[class=^.*] border pixel 3
+#smart_borders on
+
+bindsym $mod+Shift+plus exec pactl set-sink-volume 1 +5% 
+bindsym $mod+Shift+minus exec pactl set-sink-volume 1 -5%
+
+bindsym $mod+minus move scratchpad
+bindsym $mod+plus scratchpad show
+
+# exec_always --no-startup-id xrandr --output HDMI-0 --rotate right
+# exec_always --no-startup-id xrandr --output DP-2 --primary
+# exec_always --no-startup-id xrandr --output HDMI-0 --right-of DP-2
+# exec_always --no-startup-id superpaper
+#exec_always --no-startup-id blu
+
+#exec_always --no-startup-id feh ~/.local/share/wallpapers/Fluent/contents/images/3840x2160.jpg --xinerama-index 1 --bg-fill
+#exec_always --no-startup-id feh ~/.local/share/wallpapers/Fluent/contents/images/3840x2160.jpg --xinerama-index 0 --bg-scale

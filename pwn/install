@@ -1,0 +1,15 @@
+#!/bin/bash -ex
+
+sudo apt install gdb gdbserver ruby
+git clone https://github.com/pwndbg/pwndbg
+sh pwndbg/setup.sh
+
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+mkvirtualenv pwn
+pip install pwntools
+
+git clone https://github.com/lieanu/LibcSearcher ~/Documents/LibcSearcher
+python ~/Documents/LibcSearcher/setup.py develop
+
+gem install one_gadget

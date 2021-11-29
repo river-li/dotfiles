@@ -1,0 +1,12 @@
+#!/bin/bash -ex
+
+sudo apt install zsh bat curl thefuck virtualenvwrapper zsh-autosuggestions zsh-syntax-highlighting
+
+# install oh-my-zsh
+git clone https://gitee.com/mirrors/oh-my-zsh ~/.oh-my-zsh
+git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+cp -r /usr/share/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/
+cp -r /usr/share/zsh-autosuggestions ~/.oh-my-zsh/plugins/
+
+chsh -s $(which zsh)

@@ -1,0 +1,9 @@
+#!/bin/bash -ex
+
+sudo apt install polybar i3-gaps
+
+# some optional packages
+sudo apt install compton fcitx alacritty rofi
+
+cp -r ./polybar ~/.config/
+cp -r ./i3 ~/.config
