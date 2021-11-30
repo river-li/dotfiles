@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 
 sudo apt remove vim vim-runtime vim-tiny vim-common
-sudo apt install ctags nerd-fonts-complete cmake git fzf
+sudo apt install universal-ctags cmake git fzf
 
 git clone https://github.com/vim/vim.git ./tmp
 cd tmp/src
