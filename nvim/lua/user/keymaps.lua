@@ -21,7 +21,7 @@ keymap("n", "<leader>k", "<C-w>k", opts)
 keymap("n", "<leader>l", "<C-w>l", opts)
 
 -- Open Left Explorer
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) 
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Split Window
 keymap("n", "sl", ":vsplit<CR>", opts) 
@@ -53,3 +53,11 @@ keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>gr", "<cmd>Telescope lsp_reference<cr>", opts)
 keymap("n", "<leader>gd", "<cmd>Telescope lsp_definition<cr>", opts)
 keymap("n", "<leader>gi", "<cmd>Telescope lsp_implementation<cr>", opts)
+
+-- vimtex
+keymap("n", "<leader>ll", "<Plug>(vimtex-compile)", opts)
+keymap("n", "<leader>lv", "<Plug>(vimtex-view)", opts)
+
+keymap("n", "<M-s>", ":w<CR>", opts)
+keymap("i", "<M-s>", "<ESC>:w<CR>i", opts)
+
