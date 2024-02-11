@@ -45,7 +45,7 @@ function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
 
-local python = Terminal:new({ cmd = "ipython", hidden = true })
+local python = Terminal:new({ cmd = "/usr/bin/env ipython", hidden = true })
 
 function _PYTHON_TOGGLE()
 	python:toggle()
