@@ -12,4 +12,5 @@ require "user.toggleterm"
 require "plugin.fzf"
 require "plugin.copilot"
 require "plugin.luasnip"
+require "plugin.vimtex"
 
