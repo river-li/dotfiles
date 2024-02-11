@@ -88,9 +88,10 @@ require("lazy").setup({
 		'williamboman/mason.nvim',
 		'williamboman/mason-lspconfig',
 
+		'lervag/vimtex',
 		-- NvimTree
-		'kyazdani42/nvim-tree.lua',
-		'kyazdani42/nvim-web-devicons',
+		{ 'nvim-tree/nvim-tree.lua', config=function() require("nvim-tree").setup({}) end,},
+		'nvim-tree/nvim-web-devicons',
 
 		-- BufferLine
 		'akinsho/bufferline.nvim',
@@ -98,5 +99,23 @@ require("lazy").setup({
 
 		-- ToggleTerm
 		'akinsho/toggleterm.nvim',
+
+		'rust-lang/rust.vim',
+
+		-- which key
+		{
+		  "folke/which-key.nvim",
+		  event = "VeryLazy",
+		  init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		  end,
+		  opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		  }
+		}
+
 })
 
