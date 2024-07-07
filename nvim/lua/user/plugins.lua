@@ -37,7 +37,7 @@ require("lazy").setup({
 		{
 				'zbirenbaum/copilot-cmp',
 				config = function ()
-						-- require("copilot_cmp").setup()
+						require("copilot_cmp").setup()
 						-- Disable copilot for now
 				end
 		},
@@ -100,7 +100,59 @@ require("lazy").setup({
 		-- ToggleTerm
 		'akinsho/toggleterm.nvim',
 
+		-- Rust
 		'rust-lang/rust.vim',
+		{
+		    'mrcjkb/rustaceanvim',
+			version = '^4',
+			lazy = false,
+		},
+
+		-- indent line
+		{
+		    'shellRaining/hlchunk.nvim',
+			event = { "BufReadPre", "BufNewFile" },
+			config = function()
+				require("hlchunk").setup({
+				    chunk = { enable = true },
+					indent = { enable = true },
+			})
+			end
+	    },
+
+		-- typst
+		{
+		    'kaarmu/typst.vim',
+		    ft = 'typst',
+			lazy=false,
+		},
+
+
+		-- Theme
+		{
+				'catppuccin/nvim',
+				name = 'catppuccin',
+				priority = 1000
+		},
+
+		-- git signs
+		{
+				'lewis6991/gitsigns.nvim',
+				config = function()
+						require('gitsigns').setup()
+				end
+		},
+
+
+		-- edgy
+		{
+			'folke/edgy.nvim',
+			event = "VeryLazy",
+			opts = {}
+		},
+
+		-- animation
+		{ 'echasnovski/mini.nvim', version = false },
 
 		-- which key
 		{
@@ -112,8 +164,7 @@ require("lazy").setup({
 		  end,
 		  opts = {
 			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
+			-- or leave it empty to use the default setting			-- refer to the configuration section below
 		  }
 		}
 

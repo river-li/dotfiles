@@ -33,11 +33,11 @@ keymap("n", "<leader><CR>", ":nohlsearch<CR>", opts)
 -- Resize windows
 
 -- Switch between buffers and tabs
-keymap("n", "<S-l>", ":bnext<CR>", opts) 
-keymap("n", "<S-h>", ":bprevious<CR>", opts) 
-keymap("n", "<leader>tn", ":tabnext<CR>", opts) 
-keymap("n", "<leader>tN", ":tabnew<CR>", opts) 
-keymap("n", "<leader>tp", ":tabprevious<CR>", opts) 
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>tn", ":tabnext<CR>", opts)
+keymap("n", "<leader>tN", ":tabnew<CR>", opts)
+keymap("n", "<leader>tp", ":tabprevious<CR>", opts)
 
 -- Visual Mode
 -- 	Move text up and down
