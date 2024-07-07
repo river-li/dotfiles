@@ -1,0 +1,115 @@
+working_directory = "None"
+
+[colors]
+indexed_colors = [
+    { color = "#FAB387", index = 16 },
+    { color = "#F5E0DC", index = 17 },
+]
+
+[colors.bright]
+black = "#598489"
+blue = "#009AFB"
+cyan = "#5FFFFF"
+green = "#00FF9A"
+magenta = "#FF578F"
+red = "#E65029"
+white = "#D9FBFF"
+yellow = "#E89440"
+
+[colors.cursor]
+cursor = "#F5E0DC"
+text = "#1E1E2E"
+
+[colors.dim]
+black = "#45475A"
+blue = "#89B4FA"
+cyan = "#94E2D5"
+green = "#A6E3A1"
+magenta = "#F5C2E7"
+red = "#F38BA8"
+white = "#BAC2DE"
+yellow = "#F9E2AF"
+
+[colors.hints.end]
+background = "#A6ADC8"
+foreground = "#1E1E2E"
+
+[colors.hints.start]
+background = "#F9E2AF"
+foreground = "#1E1E2E"
+
+[colors.normal]
+black = "#6A787A"
+blue = "#44AAE6"
+cyan = "#3DD5E7"
+green = "#39E9A8"
+magenta = "#E17599"
+red = "#E9653B"
+white = "#C3DDE1"
+yellow = "#E5B684"
+
+[colors.primary]
+background = "#1E1E1E"
+bright_foreground = "#CDD6F4"
+dim_foreground = "#CDD6F4"
+foreground = "#CCCCCC"
+
+[colors.search.focused_match]
+background = "#A6E3A1"
+foreground = "#1E1E2E"
+
+[colors.search.matches]
+background = "#A6ADC8"
+foreground = "#1E1E2E"
+
+[colors.selection]
+background = "#F5E0DC"
+text = "#1E1E2E"
+
+[colors.vi_mode_cursor]
+cursor = "#B4BEFE"
+text = "#1E1E2E"
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "SauceCodePro NF"
+style = "Italic"
+
+[font.bold_italic]
+family = "SauceCodePro NF"
+style = "Bold Italic"
+
+[font.normal]
+family = "SauceCodePro NF"
+
+[keyboard]
+bindings = [
+    { action = "Quit", key = "Q", mods = "Command" },
+    { action = "Quit", key = "W", mods = "Command" },
+    { action = "CreateNewWindow", key = "N", mods = "Command" },
+    { mods = "Control", key = "Semicolon", chars = "\u001b[27;5;59~" },
+    { mods = "Control", key = "Enter", chars = "\u001b[27;5;13~" },
+    { mods = "Control", key = "Period", chars = "\u001b[27;5;46~" },
+    # { mods = "Control", key = "Quote", chars = "\u001b[27;5;39~" },
+    # { mods = "Control", key = "LeftParenthesis", chars = "\u001b[27;5;40~" },
+    # { mods = "Control", key = "RightParenthesis", chars = "\u001b[27;5;41~" },
+]
+
+[mouse]
+hide_when_typing = false
+
+[window]
+decorations = "buttonless"
+dynamic_title = true
+opacity = 1.0
+title = "Terminal"
+
+[window.padding]
+x = 3
+y = 5
