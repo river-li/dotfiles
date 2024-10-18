@@ -1,6 +1,11 @@
 vim.cmd("filetype plugin indent on")
+vim.cmd("set tabstop=4")
 vim.cmd("syntax enable")
 vim.cmd("let g:vimtex_view_method = 'skim'")
 vim.cmd("let g:vimtex_compiler_latexmk_engines = { '_': '-xelatex'}")
 vim.cmd("let g:vimtex_quickfix_open_on_warning = 0")
 vim.cmd("let g:vimtex_view_enabled = 0")
+vim.cmd("let g:vimtex_view_skim_sync = 1")
+vim.cmd("let g:vimtex_skim_activate = 1")
+--[[ vim.cmd("set textwidth=80")
+vim.cmd("set cc=80") ]]
